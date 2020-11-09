@@ -1,0 +1,14 @@
+.k-list {
+    .k-item {
+        font-weight: 500;
+
+        &.k-state-selected {
+            box-shadow: none !important;
+        }
+    }
+}
+
+.k-popup {
+    box-shadow: $popup-shadow;
+    border: none !important;
+}

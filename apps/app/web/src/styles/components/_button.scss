@@ -1,0 +1,25 @@
+.btn {
+    border-radius: $btn-border-radius-base;
+    font-weight: 500;
+
+    &.btn-primary-light {
+        background-color: #2d5378;
+
+        &:hover {
+            background-color: rgba(250, 250, 250, 0.3);
+        }
+    }
+
+    &.btn-info {
+        background-color: theme-color('info') !important;
+
+        &:hover {
+            background-color: darken(theme-color('info'), 10%) !important;
+            border-color: darken(theme-color('info'), 10%) !important;
+        }
+    }
+}
+
+ubud-topbar-layout .navbar .navbar-nav > li.nav-item > a {
+    border-radius: $btn-border-radius-base !important;
+}

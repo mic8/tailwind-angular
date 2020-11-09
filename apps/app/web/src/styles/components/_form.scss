@@ -1,0 +1,419 @@
+@import '../variables';
+
+.form-group {
+    label {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+}
+
+.form-control,
+.k-input,
+.k-textbox {
+    font-weight: 500;
+}
+
+.form-control {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.form-big {
+    .form-group {
+        textarea.form-control,
+        textarea.k-input {
+            min-height: 80px !important;
+        }
+
+        .form-control,
+        .k-input,
+        .k-textbox {
+            width: 100%;
+            background: $input-bg-color;
+            font-weight: 500;
+            color: $dark;
+        }
+
+        input.form-control,
+        input.k-input,
+        input.k-textbox,
+        span.k-input,
+        .k-dropdown {
+            height: 44px !important;
+        }
+
+        .k-combobox .k-select,
+        .k-dropdown .k-select {
+            background: $input-bg-color;
+            border: none;
+            color: theme-color('dark');
+            width: 2.640625rem;
+        }
+
+        .k-dropdown {
+            background-color: transparent;
+
+            .k-select {
+                border: none;
+                color: theme-color('dark');
+            }
+            .k-dropdown-wrap {
+                background: none;
+                border: none;
+                color: theme-color('dark');
+                box-shadow: none;
+                width: 100%;
+            }
+        }
+
+        .k-datepicker .k-select {
+            background-color: $input-group-addon-bg;
+            border-color: $input-group-addon-border-color;
+            color: theme-color('dark');
+            width: 2.640625rem;
+        }
+
+        .k-switch-on:hover {
+            .k-switch-handle {
+                border-color: $blue;
+                background-color: $blue;
+            }
+        }
+
+        .k-switch {
+            min-width: 80px;
+            background: rgba(0, 0, 0, 0.1);
+
+            .k-switch-handle {
+                > span {
+                    font-weight: 500;
+                }
+            }
+        }
+
+        kendo-multiselect {
+            .k-multiselect-wrap {
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+            .k-input {
+                background: none !important;
+            }
+            kendo-taglist li {
+                padding: 8px;
+            }
+        }
+    }
+}
+
+.input-group {
+    &.naker-search {
+        .form-control:not(.k-widget) {
+            background: $white;
+            padding: 13px 16px;
+            line-height: 1rem;
+        }
+
+        .form-control:not(:first-child) {
+            border-left: 1px solid $gray-300;
+        }
+
+        .filter-input {
+            position: relative;
+            padding: 0 !important;
+
+            .k-combobox {
+                height: 100%;
+                width: 100%;
+
+                .k-input {
+                    height: 100%;
+                }
+
+                .k-select {
+                    background: white !important;
+                    border-top: none;
+                    color: theme-color('dark');
+                    width: 2.640625rem;
+
+                    &:hover {
+                        background: $gray-200 !important;
+                    }
+                }
+            }
+
+            .k-combobox .k-select,
+            .k-dropdown .k-select {
+                background: $input-bg-color;
+                border: none;
+                color: theme-color('dark');
+                width: 2.640625rem;
+            }
+
+            .k-dropdown {
+                background-color: transparent;
+
+                .k-select {
+                    border: none;
+                    color: theme-color('dark');
+                }
+                .k-dropdown-wrap {
+                    background: none;
+                    border: none;
+                    color: theme-color('dark');
+                    box-shadow: none;
+                    width: 100%;
+                }
+            }
+        }
+
+        button.btn {
+            width: 44px;
+            font-size: 18px;
+        }
+    }
+}
+
+.k-autocomplete,
+.k-dateinput-wrap,
+.k-dropdown-wrap,
+.k-picker-wrap,
+.k-multiselect-wrap,
+.k-numeric-wrap {
+    border-width: 0;
+}
+
+.k-autocomplete .k-input,
+.k-dateinput-wrap .k-input,
+.k-dropdown-wrap .k-input,
+.k-combobox-wrap .k-input,
+.k-picker-wrap .k-input,
+.k-multiselect-wrap .k-input,
+.k-numeric-wrap .k-input {
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+}
+
+.k-numeric-wrap .k-input,
+.k-autocomplete .k-input {
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+// radio button
+.group-radio {
+    margin: 0 -10px;
+
+    div {
+        flex: 1;
+        padding: 0 10px;
+
+        label {
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            border: 1px solid $gray-300;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        input {
+            display: none;
+
+            &:checked + label {
+                background: $info;
+                color: white;
+                border-color: $info;
+            }
+        }
+    }
+}
+
+.form-sm {
+    .form-control {
+        font-size: 1rem;
+    }
+
+    .form-group-title {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    .form-group {
+        label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 14px;
+
+            &.label-content {
+                font-weight: 600;
+                color: $text-muted;
+                text-transform: uppercase;
+                font-size: 12px;
+                margin-bottom: 4px;
+            }
+        }
+
+        .input-group-append,
+        .input-group-prepend {
+            > .input-group-text {
+                background-color: $input-bg-color;
+            }
+
+            > .form-control {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+
+        .input-group-prepend {
+            border-right: 1px solid rgba(0, 0, 0, 0.2) !important;
+        }
+    }
+
+    .form-control,
+    .k-autocomplete.form-control {
+        background: $input-bg-color;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background: $input-bg-color;
+        }
+
+        &:disabled {
+            background: $input-bg-color-disabled !important;
+        }
+
+        &[readonly] {
+            background: $input-bg-color !important;
+        }
+    }
+
+    .k-maskedtextbox.form-control .k-textbox {
+        height: calc(2.25rem + 0.999px) !important;
+        border: 0 !important;
+    }
+
+    .k-combobox.no-arrow {
+        .k-select {
+            background: none !important;
+            border: none !important;
+
+            .k-i-arrow-s {
+                display: none !important;
+            }
+        }
+
+        .k-input {
+            padding-right: 30px;
+        }
+
+        .k-dropdown-wrap {
+            .k-i-close {
+                right: 10px;
+            }
+        }
+    }
+
+    .k-autocomplete,
+    .k-combobox .k-dropdown-wrap,
+    .k-datepicker .k-picker-wrap,
+    .k-timepicker .k-picker-wrap,
+    .k-datetimepicker .k-picker-wrap,
+    .k-dateinput .k-dateinput-wrap,
+    .k-textbox,
+    .k-input.k-textbox,
+    .k-multiselect-wrap,
+    .k-numerictextbox .k-numeric-wrap,
+    .k-dropdown .k-dropdown-wrap {
+        background-color: transparent;
+    }
+
+    .k-combobox .k-select,
+    .k-datepicker .k-select,
+    .k-timepicker .k-select {
+        background-color: transparent !important;
+        border: none !important;
+        color: $gray-600;
+    }
+
+    .k-autocomplete,
+    .k-dateinput-wrap,
+    .k-dropdown-wrap,
+    .k-picker-wrap,
+    .k-multiselect-wrap,
+    .k-numeric-wrap {
+        border-width: 0;
+    }
+
+    .k-state-focused {
+        .k-multiselect-wrap {
+            background-color: transparent;
+        }
+    }
+
+    .k-multiselect-wrap:hover {
+        background-color: transparent;
+    }
+
+    .k-autocomplete .k-input,
+    .k-dateinput-wrap .k-input,
+    .k-dropdown-wrap .k-input,
+    .k-picker-wrap .k-input,
+    .k-multiselect-wrap .k-input,
+    .k-numeric-wrap .k-input {
+        border-top-left-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+    }
+
+    .k-numeric-wrap .k-input,
+    .k-autocomplete .k-input {
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+    }
+
+    input[type='number']::-webkit-outer-spin-button,
+    input[type='number']::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type='number'] {
+        -moz-appearance: textfield;
+    }
+
+    .input-group-prepend {
+        .form-control {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+
+    .k-radio-label {
+        &:before {
+            border-radius: 50%;
+            border-color: rgba(48, 54, 60, 0.15);
+            background-color: rgba(48, 54, 60, 0.15);
+        }
+    }
+
+    .k-checkbox-label {
+        &:before {
+            border-color: rgba(48, 54, 60, 0.15);
+            background-color: rgba(48, 54, 60, 0.15);
+        }
+    }
+}

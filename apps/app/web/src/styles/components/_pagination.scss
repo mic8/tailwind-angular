@@ -1,0 +1,30 @@
+.pagination {
+    .page {
+        &-item {
+            margin: 0 4px;
+
+            &:first-child {
+                margin-left: 0;
+                margin-right: 12px;
+            }
+
+            &:last-child {
+                margin-left: 12px;
+                margin-right: 0;
+            }
+
+            &.disabled {
+                .page-link {
+                    background-color: #f2f2f2 !important;
+                }
+            }
+        }
+
+        &-link {
+            background-color: #f2f2f2;
+            border-radius: 5px !important;
+            font-weight: 600;
+            color: $primary; // test
+        }
+    }
+}

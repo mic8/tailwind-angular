@@ -1,0 +1,85 @@
+.k-grid {
+    a {
+        &:hover {
+            text-decoration: underline !important;
+        }
+    }
+
+    &.grid-no-border {
+        border: none;
+
+        tbody {
+            tr:not(.k-alt) {
+                &:hover,
+                &.k-state-hover {
+                    background: none;
+                }
+            }
+
+            tr {
+                &.k-alt {
+                    background-color: transparent;
+
+                    > td {
+                        border-top: 1px solid $secondary;
+                        border-bottom: 1px solid $secondary;
+                    }
+                }
+            }
+        }
+
+        .k-grid-header {
+            @extend .text-muted !optional;
+            font-weight: bold;
+            font-size: 12px;
+            text-transform: uppercase;
+            border-bottom-width: 2px;
+            background-color: transparent;
+
+            th {
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+
+        td,
+        th {
+            border-width: 0;
+        }
+    }
+
+    td {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    a {
+        color: theme-color('primary') !important;
+        cursor: pointer;
+
+        &.k-state-selected {
+            color: $white !important;
+        }
+    }
+}
+
+.k-pager-wrap .k-link,
+.k-pager-wrap .k-pager-nav {
+    background-color: $gray-400;
+    color: theme-color('primary');
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: $box-radius;
+    font-weight: 500;
+    border: none !important;
+
+    &:hover {
+        background-color: $gray-400;
+        text-decoration: none !important;
+    }
+
+    &.k-state-selected {
+        background-color: theme-color('primary');
+        color: $white;
+    }
+}

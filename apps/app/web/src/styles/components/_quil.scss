@@ -1,0 +1,31 @@
+quill-editor {
+    .ql-toolbar {
+        border-top-left-radius: $box-radius;
+        border-top-right-radius: $box-radius;
+        border: none !important;
+        background-color: $input-bg-color;
+    }
+
+    .ql-container {
+        border-bottom-left-radius: $box-radius;
+        border-bottom-right-radius: $box-radius;
+        border: none !important;
+        background-color: $input-bg-color;
+    }
+
+    .ql-editor {
+        font-weight: 400;
+
+        ul,
+        ol {
+            padding-left: 0;
+        }
+
+        &::placeholder,
+        &.ql-blank::before {
+            font-style: normal !important;
+            font-weight: 400;
+            color: #a8bece;
+        }
+    }
+}

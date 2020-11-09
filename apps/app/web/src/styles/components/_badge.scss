@@ -1,0 +1,74 @@
+@import '../variables';
+
+.round-badge {
+    background: $blue;
+    color: $white;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    line-height: 24px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.badge {
+    padding: 5px 10px;
+
+    &.badge-primary {
+        background: #e1effe !important;
+        color: #1e429f !important;
+    }
+
+    &.badge-success {
+        background: #def7ec !important;
+        color: #04543f !important;
+    }
+
+    &.badge-secondary {
+        background: #d5f5f6 !important;
+        color: #03505c !important;
+    }
+
+    &.badge-warning {
+        background: #fdf6b2 !important;
+        color: #723b14 !important;
+    }
+
+    &.badge-danger {
+        background: #fde8e7 !important;
+        color: #9a1c1c !important;
+    }
+
+    &.ion-color-dark {
+        --ion-color-base: #f4f5f7 !important;
+        --ion-color-contrast: #252f3f !important;
+    }
+}
+
+.vacancy-status-badge {
+    background: #9e9e9e;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 50px;
+
+    &.active {
+        background: #4caf50;
+    }
+
+    &.primary {
+        background: $primary;
+    }
+
+    &.success {
+        background: $success;
+    }
+
+    &.warning {
+        background: $orange;
+    }
+
+    &.error {
+        background: $danger;
+    }
+}
